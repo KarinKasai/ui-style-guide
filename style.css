@@ -185,11 +185,11 @@ header {
 
 /* Animation for toggle hamburgermenu */
 .animation0 {
-    transform: rotate(45deg) translateY(15px);
+    transform: rotate(45deg) translateY(17px);
     transition: 0.3s ease-in-out;
 }
 .animation2 {
-    transform: rotate(-45deg) translateY(-15px);
+    transform: rotate(-45deg) translateY(-17px);
     transition: 0.3s ease-in-out;
 }
 
@@ -1093,6 +1093,27 @@ section {
 
     section {
         margin: .5em 0 .7em 0;
+    }
+
+    /************** STICKY NAV BAR ***************/
+
+    .navtopbar {
+        height: 90px;
+    }
+    
+    .logo {
+        width: 180px;
+    }
+    
+    /* Positioning for hamburgermenu */
+    .hamburger {
+        height: 20px;
+        width: 30px;
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 25px;
+        margin: 30px 25px 0 0;
     }
 
     /* HUGE BACKGROUND TEXT */
