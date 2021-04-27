@@ -1,0 +1,1336 @@
+/*Import Font below here*/
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,600;1,400;1,600&family=Yantramanav:wght@300;400;500;700&display=swap');
+
+
+/* CSS Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+
+
+
+/************** BASE ***************/
+/*base root*/
+html {
+    font-size : 106.3% ;
+    }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #F0F2EF; */
+    background-color: #b9c5b3;
+    transition: all 0.5s ease;
+    /* background-image: linear-gradient(to right, rgb(229, 247, 217) , #F0F2EF); */
+    /* background-size: 100% 100vh; */
+}
+
+/* change bg-color after */
+.bg-white {
+    background-color: white;
+}
+
+
+/* font-family: 'Yantramanav', 'Helvetica', sans-serif; */
+/* font-family: 'Ibarra Real Nova', "Times New Roman", serif; */
+
+/*
+ * ----------------------------------------
+ *  TYPOGRAPHY
+ * ----------------------------------------
+ */
+
+h1 , h2 , h3, h4 , h5 , h6, p {
+    color:#000000 ;
+}
+
+h1 , h2 , h3{
+    font-family: 'Ibarra Real Nova', "Times New Roman", serif;
+    }
+h4 , h5 , h6, p{
+    font-family: 'Yantramanav', 'Helvetica', sans-serif;
+    }
+h3, h4, h5, h6 {
+    text-transform: uppercase;
+    }
+
+h1 {
+    font-size : 4.209rem ;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    }
+
+h2 {
+    font-size: 2.369rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: .8;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    }
+
+h3 {
+    color: rgba(144, 157, 137);
+    font-size: 1.777rem;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.14em;
+   }
+
+h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.47;
+    letter-spacing: 0.12em;
+   }
+h5 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+   }
+h6 {
+    font-size: 0.563rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+   }
+
+p {
+    font-size: 1rem;
+    font-weight:300;
+    text-transform: none;
+    line-height: 1.53;
+    letter-spacing: 0.02em;
+    }
+
+/************** STYLE FOR HUGE BG TEXTS ***************/
+.huge_bgtext {
+    /* display: none; */
+    font-family: 'Ibarra Real Nova', "Times New Roman", serif;
+    color: rgba(144, 157, 137, 0.3);
+    font-size: 10rem;
+    font-style: italic;
+    letter-spacing: -0.03em;
+    text-transform: lowercase;
+    }
+
+/************** STYLE FOR HUGE BG TEXTS ***************/
+.h2-italic {
+    text-transform: capitalize;
+    font-style: italic;
+
+}
+
+/**
+ * ----------------------------------------
+ * HEADER STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+
+/************** NAVIGATION ***************/
+
+header {
+    /* background-color: #F0F2EF; */
+    /* background-size: 100% 100vh; */
+    width: 100%;
+    height: 100vh;
+}
+
+
+ /* style for sticky nav bar */
+.navtopbar {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+
+}
+
+.logo {
+    width: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img{
+    width: 100%;
+}
+
+/* Positioning for hamburgermenu */
+.hamburger {
+    height: 25px;
+    width: 35px;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 30px;
+    margin: 30px 30px 0 0;
+    cursor: pointer;
+    z-index: 999;
+}
+/* Style for hambergurmenu */
+.toggler {
+    width: 100%;
+    height: 2px;
+    margin: 0 0 10px 0;
+    background-color: #909D89;
+    transition: 0.3s;
+}
+
+/* Animation for toggle hamburgermenu */
+.animation0 {
+    transform: rotate(45deg) translateY(15px);
+    transition: 0.3s ease-in-out;
+}
+.animation2 {
+    transform: rotate(-45deg) translateY(-15px);
+    transition: 0.3s ease-in-out;
+}
+
+/* Style for fade effect nav menu */
+.navmenu {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    text-align: center;
+    z-index: -999;
+}
+
+/* Fade in/out effect nav menu */
+.hide {
+    opacity: 0;
+}
+
+.navmenu.show {
+    background-color: rgba(0, 0, 0, 1);
+    transition: 1s ease-in-out;
+    opacity: 1;
+    z-index: 100;
+}
+
+.navmenu ul {
+    padding: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navmenu ul li {
+    padding: 10px 0;
+    list-style: none;
+}
+.navmenu ul li a {
+    visibility: inherit;
+    color: white;
+    text-decoration: none;
+    font-family: 'Yantramanav', 'Helvetica', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.navmenu ul li a:hover {
+    color: #909D89;
+    transition: .4s ease-in-out;
+}
+
+
+/************** HERO SECTION ***************/
+
+.herotext {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.herotitle-text {
+    margin: -80px auto 0 auto;
+    max-width: 650px;
+}
+
+.herotitle-text p {
+    margin-top: 2em;
+}
+.hero-subtitle {
+    letter-spacing: 0.8em;
+}
+
+.herotext .scroll-icon img {
+    width: 50px;
+    -webkit-animation: slide-bottom 2s infinite alternate;
+    animation: slide-bottom 2s infinite alternate;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  
+
+/*
+ * ----------------------------------------
+ *  MAIN STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+ /************** COMMON MAIN & SECTION ***************/
+main, section {
+    width: 100%;
+}
+
+section {
+    margin: 2em 0 4em 0;
+    /* height: 150vh; */
+    /* to set parallax base*/
+    position: relative;
+    overflow: hidden;
+}
+.parallax {
+    text-align: left;
+    margin-left: -30px;
+    /* z-index: -999; */
+    position: absolute;  
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.parallax-grid {
+    top: -10%;
+}
+.parallax-logo {
+    top: -23%;
+}
+.parallax-color {
+    top: -36%;
+}
+.parallax-typograhy {
+    top: -14%;
+}
+.parallax-nav {
+    top: -90%;
+}
+.parallax-components {
+    top: -25%;
+}
+
+
+.section-wrapper {
+    width: 80%;
+    /* distance between huge title and text */
+    margin: 5em auto;
+    
+}
+
+.description {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 0 auto 5em auto;
+    
+}
+.description h2{
+    text-align: right;
+}
+
+.line {
+    flex-basis: 170px;
+    border-top: 1px solid #000;
+    margin: 1em 1em 0 1em;
+}
+.description p{
+    flex-basis: 40%;
+}
+
+
+/*
+ * ----------------------------------------
+ *  GRID SECTION STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+.percentage {
+    letter-spacing: .2em;
+
+ }
+
+.grid-demo-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns:  repeat(12, 1fr);
+    grid-template-rows:  repeat(5, 1fr);
+    gap: 20px;
+}
+
+.grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6, .grid-item7,.grid-item8,.grid-item9, .grid-item10, .grid-item11, .grid-item12 {
+    /* height: 100px; */
+    width: 100%;
+    text-align: center;  
+}
+
+.grid-block {
+    background-color: #F0F2EF;
+    border: .8px solid #909D89;
+    padding: 12px;
+}
+
+.grid-item1 {
+    grid-row: 1/2;
+    grid-column: 1/13;
+}
+
+.grid-item2 {
+    grid-row: 2/3;
+    grid-column: 1/7;
+}
+.grid-item3 {
+    grid-row: 2/3;
+    grid-column: 7/13;
+}
+.grid-item4 {
+    grid-row: 3/4;
+    grid-column: 1/5;
+}
+.grid-item5 {
+    grid-row: 3/4;
+    grid-column: 5/9;
+}
+.grid-item6 {
+    grid-row: 3/4;
+    grid-column: 9/13;
+}
+.grid-item7 {
+    grid-row: 4/5;
+    grid-column: 1/4;
+}
+.grid-item8 {
+    grid-row: 4/5;
+    grid-column: 4/7;
+}
+.grid-item9 {
+    grid-row: 4/5;
+    grid-column: 7/10;
+}
+.grid-item10 {
+    grid-row: 4/5;
+    grid-column: 10/13;
+}
+.grid-item11 {
+    grid-row: 5/6;
+    grid-column: 1/5;
+}
+.grid-item12 {
+    grid-row: 5/6;
+    grid-column: 5/13;
+}
+
+/*
+ * ----------------------------------------
+ *  LOGO SECTION STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+ /************** COMMON BOX SHADOW AND IMAGES ***************/
+.logo-detail, .color-detail, .typography-detail, .navigation-detail, .components-detail {
+    width: 90%;
+    padding: 2em;
+    margin: 0 auto;
+    /* background-color: #F0F2EF; */
+    box-shadow:3px 2px 10px 2px rgba(211, 211, 212, 0.2);
+}
+.logo-detail{  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+ }
+.logo-desktop img, .logo-mobile img, .color-detail img {
+    display:block;
+}
+
+
+.logo-desktop img{
+    width: 250px;
+}
+.logo-mobile img {
+    width: 100px;
+}
+.logo-desktop h4, .logo-mobile h4 {
+    margin-bottom: 1em;
+}
+.logo-desktop div, .logo-mobile div {
+     padding: 1em;
+     margin-bottom: 1em;
+ }
+.logo-desktop div:nth-child(2) {
+    background-color: white;
+    border: .8px solid #909D89;
+}
+.logo-mobile div:nth-child(2) {
+    background-color: white;
+    border: .8px solid #909D89;
+}
+.logo-desktop div:nth-child(3) {
+     background-color: black;
+ }
+.logo-mobile div:nth-child(3) {
+    background-color: black;
+}
+.logo-desktop div:nth-child(4) {
+    background-color: #909D89;
+}
+.logo-mobile div:nth-child(4) {
+   background-color: #909D89;
+}
+
+/*
+ * ----------------------------------------
+ *  COLOR SECTION STARTS FROM HERE
+ * ----------------------------------------
+ */
+.color-detail {
+     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+.color-info {
+    width: 15%;
+}
+.color-code {
+    height: 90px;
+}
+.color-detail img{
+    width: 120px;
+}
+.bold {
+    font-weight: bold;
+}
+
+/*
+ * ----------------------------------------
+ *  TYPOGRAPHY SECTION STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+.typeface1 {
+    color: #909D89;
+}
+.typeface2 {
+    font-size: 1.3em;
+    font-weight:500;
+}
+.type-setting p {
+    font-size: 0.9em;
+    /* line-height:1.3; */
+}
+
+ /* for the title "contextual example" */
+.typography-detail h3:nth-child(3) {
+    margin-top: 4em;
+}
+ .type-flex-container {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+ }
+ .type-setting {
+     padding: 1em 0;
+     width: 25%;
+     /* border-bottom: .5px solid #909D89; */
+     border-right: .5px solid #909D89;
+ }
+ .type-example {
+     width: 70%;
+     padding-left: 1em;
+ }
+
+
+.typesetting-example {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.typesetting-example p {
+    width: 50%;
+}
+.typesetting-example .mockup img{
+    width: 100%;
+}
+.mainheading {
+    font-style: italic;
+}
+.h3-example {
+    color: black;
+}
+
+.h4-example {
+    letter-spacing: 0.4em;
+}
+
+/*
+ * ----------------------------------------
+ *  NAVIGATION SECTION STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+.nav-demo-container {
+     width: 100%;
+     margin: 0 auto;
+     border: .8px solid #909D89;
+ }
+
+.nav-demo-container h5 {
+    background-color: #F0F2EF;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 1em 0;
+}
+
+.nav-1strow-flex, .nav-2ndrow-flex {
+    width: 100%;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: row;
+}
+.nav-1strow-flex {
+    justify-content: space-between;
+    position: relative;
+}
+.left-icons {
+    margin-left: 1em;
+}
+.right-icons {
+    margin-right: 1em;
+}
+
+
+.left-icons img, .right-icons img {
+    width: 20px;
+    margin: 0 .6em;
+}
+
+.logo-nav-demo-dt {
+    visibility: visible;
+    width: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo-nav-demo-mb {
+    visibility: hidden;
+    width: 40px;
+    padding: 1em 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-hamburger{
+    visibility: hidden;
+    width: 20px;
+    padding: 1em 0;
+    position: absolute;
+    top: -40%;
+    right: 5%;
+}
+
+
+
+.nav-2ndrow-flex {
+    justify-content: center;
+}
+
+.nav-demo-menu {
+    font-size: .5em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    margin: 0 4em;
+}
+
+/*
+ * ----------------------------------------
+ *  UI COMPONENTS SECTION STARTS FROM HERE
+ * ----------------------------------------
+ */
+.components-detail h3 {
+    margin-top: 2em;
+}
+.button-grid-item h4{
+    margin-bottom: .3em;
+}
+
+.button-grid-container, .form-group, .pagination, .icons, .product-card {
+    margin-top: 2em;
+}
+
+ /************** BUTTONS ***************/
+
+/* common button style */
+.button {
+    font-family: ‘Yantramanav’, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.button:hover {
+    z-index: 1;
+}
+
+.button::before, .button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+}
+
+/* .button::before {
+    background: #F0F2EF;
+}
+
+.button::after {
+    background: rgb(1, 1, 1);
+} */
+
+.button:hover::before, .button:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.button:hover::after {
+    transition-delay: .3s;
+}
+
+/* LARGE button common style */
+.default-btn-lg, .cta-btn-lg{
+    font-size: .8rem;
+    letter-spacing: 0.17em;
+    padding: 1.2em 3.1em;
+}
+
+/* SMALL common button style */
+
+.default-btn-sm, .cta-btn-sm {
+    font-size: .8rem;
+    letter-spacing: 0.17em;
+    padding: 1.1em 2.3em;
+}
+
+
+/* default button style */
+.default-btn {
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.default-btn:hover {
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.default-btn::before {
+    background: #F0F2EF;
+}
+
+.default-btn::after {
+    background: rgb(1, 1, 1);
+}
+/* cta button style */
+.cta-btn {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+.cta-btn:hover {
+    color: rgb(255, 255, 255);
+    border: 1px solid #909D89;
+}
+
+.cta-btn::before {
+    background: #F0F2EF;
+}
+
+.cta-btn::after {
+    background: #909D89;
+}
+/* hyperlink style */
+.hyperlink {
+    font-family: ‘Yantramanav’, sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.17em;
+    padding: .9em 1.3em 0.2em 0.1em;
+    font-weight: 300;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    border-bottom: .8px solid black;
+}
+
+.hyperlink:hover {
+    color: #562C65;
+    border-bottom: .8px solid #562C65;
+}
+
+.hyperlink-box {
+    position: relative;
+}
+.hyperlink-box svg {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: -2%;
+    transform: translate(-2%, -50%);
+}
+.hyperlink-box svg:hover {
+    fill: #562C65;
+}
+
+
+/* buttons grid */
+.button-grid-container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: start;
+    column-gap: 15px;
+    row-gap: 20px;
+}
+
+
+
+/* quantity form */
+
+
+.form-group label {
+    font-family: ‘Yantramanav’, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.47;
+    letter-spacing: 0.12em;
+}
+
+.input-group {
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+}
+.form-control {
+    width: 40px;
+    border-radius: 0;
+    border: 0.8px solid #909D89;
+
+}
+.btn-quantity {
+    padding: 0.9em 1.3em;
+    background-color: #909D89;
+    border-radius: 0;
+    border: none;
+}
+
+.glyphicon {
+    font-family: ‘Yantramanav’, sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+
+
+/* single or pair */
+.form-container h4{
+    margin: 1.5em 0 .3em 0;
+}
+.single-pair {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.singlepair-btn {
+    width: 120px;
+    text-align: center;
+    font-size: .8rem;
+    letter-spacing: 0.17em;
+    padding: 1.2em 3.1em;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    transition: .3s ease-in-out;
+
+}
+
+.singlepair-btn:hover {
+    color: #909D89;
+    border: 1px solid #909D89;
+}
+
+.singlepair-btn:focus {
+    color: rgb(255, 255, 255);
+    background-color: #909D89;
+    border: 1px solid #909D89;
+}
+
+/* newsletter form */
+
+.subscribe-box {
+    width: 70%;
+    margin-top: .3em;
+}
+.subscribe-form {
+    width: 100%;
+}
+
+.subscribe-form input {
+    /* display: inline-block; */
+    font-size: 1rem;
+}
+.subscribe-form input[type="email"] {
+    width: 45%;
+    height: 45px;
+    border: .8px solid black;
+    padding: 0 1em;
+}
+
+.subscribe-form input[type="submit"] {
+    width: 30%;
+    height: 47px;
+    border: none;
+    color: white;
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color:black;
+    cursor: pointer;
+    /* to fill the extra space between inputs */
+    position: relative;
+    left: -2%;
+    transition: all 0.1s ease-in-out;
+
+}
+
+.subscribe-form input[type="submit"]:hover {
+    color: white;
+    background-color:#909D89;
+    border: .8px solid #000000;
+}
+
+
+/* pagination */
+
+.pagination .arrow{
+    width: 50px;
+}
+.pagination .dot {
+    width: 50px
+}
+
+/* icons */
+.icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.icon-flex-item {
+    width: 50%;
+    height: 70px;
+}
+.icon-flex-item p {
+    display: inline;
+    padding-bottom: 1em;
+}
+
+.img-icon {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 1.2em;
+}
+
+/* product card */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bracelet {
+    width: 400px;
+    transition: transform .2s ease-out;
+}
+
+.product-img {
+    position: relative;
+
+}
+
+.addtofavorite {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top:13px;
+}
+
+
+.bracelet:hover {
+    box-shadow:3px 2px 10px 2px rgba(211, 211, 212, 0.2);
+    -ms-transform: scale(1.03); /* IE 9 */
+    -webkit-transform: scale(1.03); /* Safari 3-8 */
+    transform: scale(1.03); 
+    cursor: pointer;
+}
+.product-card h4, .product-card p {
+    transition: 0.2s ease;
+}
+.product-card h4:hover {
+    color: #562C65;
+    cursor: pointer;
+}
+.product-card p:hover {
+    color: #562C65;
+    cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+    width: 100%;
+}
+
+.copyright {
+    padding: 3em 0;
+    margin: 0 auto;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+
+/*
+ * ----------------------------------------
+ *  MEDIA QUERY STARTS FROM HERE
+ * ----------------------------------------
+ */
+
+@media screen and (max-width: 600px)
+{
+    /* TYPOGRAPHY */
+    h1 {
+        font-size : 3rem ;
+        }
+    
+    h2 {
+        font-size: 2.25rem;
+        }
+    
+    h3 {
+        color: rgba(144, 157, 137);
+        letter-spacing: 0.09em;
+       }
+
+    /* SPACE BETWEEN EACH SECTION */
+
+    section {
+        margin: .5em 0 .7em 0;
+    }
+
+    /* HUGE BACKGROUND TEXT */
+    .huge_bgtext {
+        font-size: 5rem;
+        }
+
+    .herotitle-text {
+        margin: -50px auto 0 auto;
+        max-width: 90%;
+        }
+
+    /************** HERO SECTION ***************/
+    .hero-subtitle {
+        margin-top: 0.3em;
+    }
+
+    /************** EACH DESCRIPTION SECTION ***************/
+    .section-wrapper {
+        width: 90%;
+        /* distance between huge title and text */
+        margin: 0 auto;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: 2.7em auto 2em auto;
+    }
+    .description h2{
+        margin-bottom: 0.7em;
+        text-align: left;
+    }
+    .line {
+        display: none;
+    }
+    /************** GRID SECTION ***************/
+    .grid-demo-container {
+        gap: 10px;
+    }
+    /************** logo SECTION ***************/
+    .logo-detail{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+     }
+
+    .logo-desktop {
+        width: 40%;
+    }
+
+    .logo-mobile {
+        width: 20%;
+    }
+    
+    .logo-desktop img{
+        width: 100%;
+    }
+    .logo-mobile img {
+        width: 100%;
+    }
+
+    /************** COLOR SECTION ***************/
+    
+    .color-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .color-info {
+       width: 45%;
+       margin-bottom: 1.5em;
+    }
+    .color-code {
+       height: auto;
+    }
+    .color-detail img{
+       width: 100px;
+    }
+    .color-code p {
+        font-size: 0.9em;
+        margin: 0;
+    }
+
+    /************** TYPOGRAPHY SECTION ***************/
+    .type-flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .type-setting {
+        padding: 1.4em 0;
+        width: 100%;
+        border: none;
+    }
+    .type-example {
+        width: 100%;
+        padding-bottom: 1.6em;
+        border-bottom: .5px solid #909D89;
+
+    }
+    .type-setting p {
+        font-size: 0.9em;
+        line-height:1.3;
+    }
+     /* for the title "contextual example" */
+    .typography-detail h3:nth-child(3) {
+        margin-top: 1.5em;
+    }
+    .typesetting-example {
+        display: flex;
+        flex-direction: column;
+    }
+    .typesetting-example p {
+        margin-top: 0.9em;
+        width: 100%;
+    }
+
+    /************** NAVIGATION SECTION ***************/
+    .nav-demo-container h5 {
+        font-size: 0.6em;
+        letter-spacing: 0.1em;
+        padding: 0.8em 0.3em;
+    }
+    .left-icons, .right-icons, .nav-2ndrow-flex {
+        display: none;
+    }
+    .logo-nav-demo-dt {
+        visibility: hidden;
+    }
+    .logo-nav-demo-mb {
+        visibility: visible;
+    }
+    .mobile-hamburger{
+        visibility: visible;
+    }
+    
+    
+
+    
+
+    /************** COMPONENTS SECTION ***************/
+    .components-detail h3 {
+        margin-top: 1.4em;
+    }
+    .button-grid-item h4, .form-container h4{
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+    }
+
+
+/* LARGE button common style */
+    .default-btn-lg, .cta-btn-lg{
+        width: 100%;
+        font-size: .8rem;
+        letter-spacing: 0.17em;
+        padding: 1.1em 2.1em;
+    }
+
+    /* SMALL common button style */
+
+    .default-btn-sm, .cta-btn-sm {
+        width: 100%;
+        font-size: .8rem;
+        letter-spacing: 0.17em;
+        padding: 0.8em 2em;
+    }
+    /* hyperlink style */
+    .hyperlink {
+        font-size: 0.8em;
+        letter-spacing: 0.17em;
+        padding: .9em 1.3em 0.2em 0.1em;
+    }
+
+    /* buttons grid */
+    .button-grid-container {
+        width: 100%;
+    }
+    .button-grid-item {
+        width: 70%;
+    }
+    .form-group label {
+        font-size: 0.7rem;
+    }
+
+    /* single or pair button */
+    .single-pair {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .singlepair-btn {
+        width: 100%;
+    }
+
+    /* newsletter form */
+
+.subscribe-box {
+    width: 100%;
+}
+.subscribe-form {
+    width: 100%;
+}
+.subscribe-form input {
+    /* display: inline-block; */
+    font-size: 0.8rem;
+}
+.subscribe-form input[type="email"] {
+    width: 45%;
+    height: 45px;
+    border: .8px solid black;
+    padding: 0 1em;
+}
+
+.subscribe-form input[type="submit"] {
+    width: 30%;
+    height: 47px;
+    font-size: .8rem;
+    /* to fill the extra space between inputs */
+    position: relative;
+    left: -2%;
+}
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+    
+    
+}
+    
+   
