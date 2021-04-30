@@ -58,14 +58,14 @@ h1 {
     font-weight: 600;
     font-style: normal;
     line-height: 0.9;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     }
 
 h2 {
     font-size: 2.369rem;
     font-weight: 400;
     font-style: normal;
-    line-height: .8;
+    line-height: .9;
     letter-spacing: -0.01em;
     text-transform: capitalize;
     }
@@ -75,14 +75,14 @@ h3 {
     font-size: 1.777rem;
     font-weight: 400;
     line-height: 1.16;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.03em;
    }
 
 h4 {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.47;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.09em;
    }
 h5 {
     font-size: 0.75rem;
@@ -104,6 +104,7 @@ p {
     line-height: 1.53;
     letter-spacing: 0.02em;
     }
+
 
 /************** STYLE FOR HUGE BG TEXTS ***************/
 .huge_bgtext {
@@ -266,6 +267,7 @@ header {
     margin-top: 2em;
 }
 .hero-subtitle {
+    margin-top: 0.5em;
     letter-spacing: 0.8em;
 }
 
@@ -319,6 +321,7 @@ section {
     /* to set parallax base*/
     position: relative;
     overflow: hidden;
+    /* background-color: burlywood; */
 }
 .parallax {
     text-align: left;
@@ -352,14 +355,16 @@ section {
 
 
 .section-wrapper {
+    /* background-color: bisque; */
     width: 80%;
     /* distance between huge title and text */
     margin: 5em auto;
+    padding-bottom: 2em;
     
 }
 
 .description {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -371,12 +376,14 @@ section {
 }
 
 .line {
-    flex-basis: 170px;
+    /* flex-basis: 170px; */
+    width: 140px;
     border-top: 1px solid #000;
     margin: 1em 1em 0 1em;
 }
 .description p{
-    flex-basis: 40%;
+    /* flex-basis: 40%; */
+    width: 50%;
 }
 
 
@@ -386,10 +393,10 @@ section {
  * ----------------------------------------
  */
 
-.percentage {
+/* .percentage {
     letter-spacing: .2em;
 
- }
+ } */
 
 .grid-demo-container {
     width: 100%;
@@ -469,11 +476,12 @@ section {
 
  /************** COMMON BOX SHADOW AND IMAGES ***************/
 .logo-detail, .color-detail, .typography-detail, .navigation-detail, .components-detail {
-    width: 90%;
+    width: 80%;
     padding: 2em;
     margin: 0 auto;
     /* background-color: #F0F2EF; */
-    box-shadow:3px 2px 10px 2px rgba(211, 211, 212, 0.2);
+    box-shadow:1px 2px 10px 2px rgba(176, 176, 177, 0.166);
+    /* background-color: cadetblue; */
 }
 .logo-detail{  
     display: flex;
@@ -526,7 +534,7 @@ section {
  * ----------------------------------------
  */
 .color-detail {
-     width: 100%;
+     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -603,9 +611,7 @@ section {
     color: black;
 }
 
-.h4-example {
-    letter-spacing: 0.4em;
-}
+
 
 /*
  * ----------------------------------------
@@ -694,18 +700,23 @@ section {
  *  UI COMPONENTS SECTION STARTS FROM HERE
  * ----------------------------------------
  */
-.components-detail h3 {
-    margin-top: 2em;
-}
 .button-grid-item h4{
     margin-bottom: .3em;
 }
+.h3-components-title {
+    margin-top: 2em;
+}
 
-.button-grid-container, .form-group, .pagination, .icons, .product-card {
+.button-flex-container, .form-group, .pagination, .icons, .product-card {
     margin-top: 2em;
 }
 
  /************** BUTTONS ***************/
+
+.button-padding {
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+}
 
 /* common button style */
 .button {
@@ -826,15 +837,19 @@ section {
     border-bottom: .8px solid #562C65;
 }
 
-.hyperlink-box {
+/* .hyperlink-box {
+    position: relative;
+} */
+
+.hyperlink {
     position: relative;
 }
 .hyperlink-box svg {
     width: 20px;
     position: absolute;
-    top: 50%;
-    right: -2%;
-    transform: translate(-2%, -50%);
+    top: 80%;
+    right: 0%;
+    transform: translate(-0%, -80%);
 }
 .hyperlink-box svg:hover {
     fill: #562C65;
@@ -842,14 +857,18 @@ section {
 
 
 /* buttons grid */
-.button-grid-container {
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+.button-flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-items: start;
-    column-gap: 15px;
-    row-gap: 20px;
+    
+}
+
+.button-flex-item {
+    width: 50%;
+    margin-top: 1.7em;
 }
 
 
@@ -896,14 +915,14 @@ section {
     margin: 1.5em 0 .3em 0;
 }
 .single-pair {
-    width: 40%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .singlepair-btn {
-    width: 120px;
+    width: 100px;
     text-align: center;
     font-size: .8rem;
     letter-spacing: 0.17em;
@@ -928,7 +947,7 @@ section {
 /* newsletter form */
 
 .subscribe-box {
-    width: 70%;
+    width: 90%;
     margin-top: .3em;
 }
 .subscribe-form {
@@ -937,7 +956,8 @@ section {
 
 .subscribe-form input {
     /* display: inline-block; */
-    font-size: 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
 }
 .subscribe-form input[type="email"] {
     width: 45%;
@@ -946,19 +966,21 @@ section {
     padding: 0 1em;
 }
 
+
 .subscribe-form input[type="submit"] {
-    width: 30%;
-    height: 47px;
+    width: 35%;
+    height: 48px;
     border: none;
     color: white;
-    font-size: .9rem;
+    font-size: .8rem;
+    letter-spacing: 0.17em;
     text-transform: uppercase;
     font-weight: 400;
     background-color:black;
     cursor: pointer;
     /* to fill the extra space between inputs */
     position: relative;
-    left: -2%;
+    left: -1%;
     transition: all 0.1s ease-in-out;
 
 }
@@ -1036,6 +1058,11 @@ section {
     -webkit-transform: scale(1.03); /* Safari 3-8 */
     transform: scale(1.03); 
     cursor: pointer;
+}
+
+.product-card p {
+    font-size: 1.3em;
+
 }
 .product-card h4, .product-card p {
     transition: 0.2s ease;
@@ -1128,7 +1155,8 @@ section {
 
     /************** HERO SECTION ***************/
     .hero-subtitle {
-        margin-top: 0.3em;
+        margin-top: 0.6em;
+        font-size: 0.72em;
     }
 
     /************** EACH DESCRIPTION SECTION ***************/
@@ -1149,6 +1177,9 @@ section {
     }
     .line {
         display: none;
+    }
+    .description p{
+        width: 100%;
     }
     /************** GRID SECTION ***************/
     .grid-demo-container {
@@ -1181,12 +1212,12 @@ section {
     .color-detail {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
     .color-info {
        width: 45%;
-       margin-bottom: 1.5em;
+       margin: 0 auto 1.5em auto;
     }
     .color-code {
        height: auto;
@@ -1258,10 +1289,15 @@ section {
     
 
     /************** COMPONENTS SECTION ***************/
-    .components-detail h3 {
-        margin-top: 1.4em;
+    /* .components-detail h3 {
+        margin-top: 1.5em;
+    } */
+    .h3-components-title {
+        margin-top: 1.5em;
     }
-    .button-grid-item h4, .form-container h4{
+
+    
+    .button-flex-item h4, .form-container h4{
         font-size: 0.8em;
         letter-spacing: 0.1em;
     }
@@ -1290,12 +1326,12 @@ section {
         padding: .9em 1.3em 0.2em 0.1em;
     }
 
+  
     /* buttons grid */
-    .button-grid-container {
-        width: 100%;
-    }
-    .button-grid-item {
-        width: 70%;
+
+    .button-flex-item {
+    width: 80%;
+    margin-top: 1.7em;
     }
     .form-group label {
         font-size: 0.7rem;
@@ -1308,36 +1344,44 @@ section {
     }
     
     .singlepair-btn {
-        width: 100%;
+        width: 85px;
     }
 
     /* newsletter form */
 
-.subscribe-box {
-    width: 100%;
-}
-.subscribe-form {
-    width: 100%;
-}
-.subscribe-form input {
-    /* display: inline-block; */
-    font-size: 0.8rem;
-}
-.subscribe-form input[type="email"] {
-    width: 45%;
-    height: 45px;
-    border: .8px solid black;
-    padding: 0 1em;
-}
+    .subscribe-box {
+        width: 100%;
+    }
+    .subscribe-form {
+        width: 100%;
+    }
+    .subscribe-form input {
+        /* display: inline-block; */
+        font-size: 0.7rem;
+    }
+    .subscribe-form input[type="email"] {
+        width: 50%;
+        height: 45px;
+        border: .8px solid black;
+        padding: 0 1em;
+    }
 
-.subscribe-form input[type="submit"] {
-    width: 30%;
-    height: 47px;
-    font-size: .8rem;
-    /* to fill the extra space between inputs */
-    position: relative;
-    left: -2%;
-}
+    .subscribe-form input[type="submit"] {
+        width: 40%;
+        height: 47px;
+        font-size: .7rem;
+        letter-spacing: 0.09em;
+        /* to fill the extra space between inputs */
+        position: relative;
+        left: -2%;
+    }
+
+    /* product card */
+    .bracelet {
+        width: 300px;
+    }
+
+  
 
 
 
